@@ -27,12 +27,10 @@ class Bank_Account:
         print("Date of Opening:", self.date_of_opening)
         print("Balance:", self.balance)
 
-    # Driver code
+   
 
-    # creating an object of class
 s = Bank_Account()
 
-    # Calling functions with that class object
 s.deposit()
 s.withdraw()
 s.check_balance()
