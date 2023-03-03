@@ -1,0 +1,39 @@
+class Bank_Account:
+    def __init__(self):
+        self.account_number = input("Enter account number: ")
+        self.date_of_opening = input("Enter date of opening (YYYY-MM-DD): ")
+        self.balance = float(input("Enter starting balance: "))
+        self.customer_name = input("Enter customer name: ")
+
+    def deposit(self):
+        amount = float(input("Enter amount to be Deposited: "))
+        self.balance += amount
+        print("\n Amount Deposited:", amount)
+
+    def withdraw(self):
+        amount = float(input("Enter amount to be Withdrawn: "))
+        if self.balance >= amount:
+            self.balance -= amount
+            print("\n You Withdrew:", amount)
+        else:
+            print("\n Insufficient balance  ")
+
+    def check_balance(self):
+        print("\n Current Balance=", self.balance)
+
+    def customer_details(self):
+        print("Customer Name:", self.customer_name)
+        print("Account Number:", self.account_number)
+        print("Date of Opening:", self.date_of_opening)
+        print("Balance:", self.balance)
+
+    # Driver code
+
+    # creating an object of class
+s = Bank_Account()
+
+    # Calling functions with that class object
+s.deposit()
+s.withdraw()
+s.check_balance()
+s.customer_details()
